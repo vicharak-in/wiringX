@@ -11,3 +11,4 @@ Platforms
    pcduino/index
    radxa/index
    raspberrypi/index
+   vicharak/index

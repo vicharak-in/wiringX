@@ -81,4 +81,5 @@ Sitemap
    platforms/pcduino/index
    platforms/radxa/index
    platforms/raspberrypi/index
+   platforms/vicharak/index
 
