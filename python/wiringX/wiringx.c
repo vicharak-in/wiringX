@@ -42,7 +42,7 @@ static void py_wiringXLog(int prio, const char *format_str, ...) {
 		va_list ap;
 		va_start(ap, format_str);
 		vsprintf(line, format_str, ap);
-		PyErr_SetString(PyExc_Exception, line); 
+		PyErr_SetString(PyExc_Exception, line);
 		va_end(ap);
 	}
 }
@@ -146,7 +146,7 @@ static PyObject *py_waitForInterrupt(PyObject *self, PyObject *args) {
 	if(pthread_detach(tid) < 0) {
 		return PyErr_SetFromErrno(PyExc_RuntimeError);
 	}
-	
+
 	return PyInt_FromLong(tid);
 }
 */
@@ -343,7 +343,7 @@ static PyMethodDef module_methods[] = {
     {"SPISetup", py_setupSPI, METH_VARARGS, "Setup SPI device"},
     /*{"ISR", py_wiringXISR, METH_VARARGS,	"Set pin to interrupt"},
     {"waitForInterrupt", py_waitForInterrupt, METH_VARARGS,	"Wait for interrupt"},*/
-		
+
     {NULL, NULL, 0, NULL}
 };
 
@@ -372,7 +372,7 @@ PyMODINIT_FUNC initgpio(void) {
 		return;
 #endif
 	}
-	
+
 	PyModule_AddObject(module, "HIGH", Py_BuildValue("i", HIGH));
 	PyModule_AddObject(module, "LOW", Py_BuildValue("i", LOW));
 	PyModule_AddObject(module, "PINMODE_NOTSET", Py_BuildValue("i", PINMODE_NOT_SET));

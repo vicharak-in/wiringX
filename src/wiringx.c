@@ -147,7 +147,7 @@ EXPORT void delayMicroseconds(unsigned int howLong) {
 #ifdef _WIN32
 		sleeper.tv_sec = wSecs;
 #else
-		sleeper.tv_sec = (__time_t)wSecs;	
+		sleeper.tv_sec = (__time_t)wSecs;
 #endif
 		sleeper.tv_nsec = (long)(uSecs * 1000L);
 		nanosleep(&sleeper, NULL);
